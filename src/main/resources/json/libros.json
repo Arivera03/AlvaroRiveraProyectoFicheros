@@ -1,0 +1,32 @@
+{
+  "autores": [
+    {
+      "id_autor": 1,
+      "nombre_autor": "J.K. Rowling",
+      "genero_autor": "Mujer",
+      "fecha_nacimiento": "31-07-1965",
+      "edad": 59
+    },
+    {
+      "id_autor": 2,
+      "nombre_autor": "Stephen King",
+      "genero_autor": "Hombre",
+      "fecha_nacimiento": "21-09-1947",
+      "edad": 77
+    }
+  ],
+  "libros": [
+    {
+      "id_libro": 11,
+      "nombre_libro": "Harry Potter y la piedra filosofal",
+      "fecha_publicacion": 1997,
+      "id_autor": 1
+    },
+    {
+      "id_libro": 12,
+      "nombre_libro": "it",
+      "fecha_publicacion": "1986",
+      "id_autor": 2
+    }
+  ]
+}
