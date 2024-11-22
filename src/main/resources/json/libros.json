@@ -25,7 +25,7 @@
     {
       "id_libro": 12,
       "nombre_libro": "it",
-      "fecha_publicacion": "1986",
+      "fecha_publicacion": 1986,
       "id_autor": 2
     }
   ]
