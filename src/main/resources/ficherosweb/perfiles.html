@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${siteName}">Nombre del sitio</title>
+</head>
+<body>
+<h1 th:text="${siteTheme}">Temática del sitio</h1>
+<h2>Autores</h2>
+<ul>
+    <li th:each="autor : ${authors}">
+        <a th:href="@{'/authors/' + ${autor.id_autor} + '.html'}" th:text="${autor.nombre_autor}"></a>
+    </li>
+</ul>
+</body>
+</html>
+

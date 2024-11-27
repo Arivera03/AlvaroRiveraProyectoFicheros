@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title th:text="${author.nombre_autor}">Perfil del autor</title>
+</head>
+<body>
+<h1 th:text="${author.nombre_autor}">Nombre del autor</h1>
+<p><strong>Género:</strong> <span th:text="${author.genero_autor}"></span></p>
+<p><strong>Fecha de nacimiento:</strong> <span th:text="${author.fecha_nacimiento}"></span></p>
+<p><strong>Edad:</strong> <span th:text="${author.edad}"></span></p>
+<h2>Libros</h2>
+<ul>
+  <li th:each="book : ${books}">
+    <span th:text="${book.nombre_libro}"></span> (<span th:text="${book.fecha_publicacion}"></span>)
+  </li>
+</ul>
+</body>
+</html>

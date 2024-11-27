@@ -52,6 +52,8 @@ public class Generador  {
         return config;
     }
 
+
+
     private List<Map<String, Object>> parseAuthors(JSONArray authorsArray) {
         List<Map<String, Object>> authors = new ArrayList<>();
 
@@ -59,10 +61,11 @@ public class Generador  {
             JSONObject authorJson = authorsArray.getJSONObject(i);
             Map<String, Object> authorMap = new HashMap<>();
 
-            authorMap.put("id", authorJson.getInt("id"));
-            authorMap.put("name", authorJson.getString("name"));
-            authorMap.put("birthdate", authorJson.getString("birthdate"));
-            authorMap.put("nationality", authorJson.getString("nationality"));
+            authorMap.put("id_autor", authorJson.getInt("id_autor"));
+            authorMap.put("nombre_autor", authorJson.getString("nombre_autor"));
+            authorMap.put("genero_autor", authorJson.getString("genero_autor"));
+            authorMap.put("fecha_nacimiento", authorJson.getString("fecha_nacimiento"));
+            authorMap.put("edad", authorJson.getInt("edad"));
 
             authors.add(authorMap);
         }
@@ -77,10 +80,10 @@ public class Generador  {
             JSONObject bookJson = booksArray.getJSONObject(i);
             Map<String, Object> bookMap = new HashMap<>();
 
-            bookMap.put("id", bookJson.getInt("id"));
-            bookMap.put("title", bookJson.getString("title"));
-            bookMap.put("author_id", bookJson.getInt("author_id"));
-            bookMap.put("published_year", bookJson.getInt("published_year"));
+            bookMap.put("id_libro", bookJson.getInt("id_libro"));
+            bookMap.put("nombre_libro", bookJson.getString("nombre_libro"));
+            bookMap.put("fecha_publicacion", bookJson.getInt("fecha_publicacion"));
+            bookMap.put("id_autor", bookJson.getInt("id_autor"));
 
             books.add(bookMap);
         }
@@ -92,12 +95,13 @@ public class Generador  {
         List<Map<String, Object>> filteredBooks = new ArrayList<>();
 
         for (Map<String, Object> book : books) {
-            if ((int) book.get("author_id") == authorId) {
+            if ((int) book.get("id_autor") == authorId) {
                 filteredBooks.add(book);
             }
         }
 
         return filteredBooks;
     }
+
 }
 
