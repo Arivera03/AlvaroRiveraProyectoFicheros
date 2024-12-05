@@ -6,13 +6,10 @@ public class main {
     public static void main(String[] args) {
         try {
             Generador generador = new Generador();
-
-            generador.generateSite();
-
-            System.out.println("¡Sitio web generado con éxito!");
+            generador.generarPagina();
+            System.out.println("Si va");
         } catch (Exception e) {
-            e.printStackTrace();
-            System.err.println("Error al generar el sitio web: " + e.getMessage());
+            System.out.println("No va");
         }
     }
 }

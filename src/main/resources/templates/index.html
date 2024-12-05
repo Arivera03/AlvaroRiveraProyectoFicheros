@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title th:text="${nombreWeb}">Título</title>
+</head>
+<body>
+<h1 th:text="${nombreWeb}">Nombre del Sitio</h1>
+<h2>Lista de Autores</h2>
+<ul>
+  <li th:each="autor : ${autores}">
+    <a th:href="'autores/autor_nº' + ${autor.id_autor} + '.html'" th:text="${autor.nombre_autor}"></a>
+  </li>
+</ul>
+</body>
+</html>
