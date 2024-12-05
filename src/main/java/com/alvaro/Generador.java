@@ -12,7 +12,6 @@ public class Generador {
     private TemplateEngine templateEngine;
 
     public Generador() {
-        // Configuración del motor de plantillas
         FileTemplateResolver templateResolver = new FileTemplateResolver();
         templateResolver.setPrefix("/home/alvrivviv/IdeaProjects/AlvaroRiveraProyectoFicheros/src/main/resources/templates/");
         templateResolver.setSuffix(".html");
