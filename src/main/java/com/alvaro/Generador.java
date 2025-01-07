@@ -13,7 +13,7 @@ public class Generador {
 
     public Generador() {
         FileTemplateResolver templateResolver = new FileTemplateResolver();
-        templateResolver.setPrefix("/home/alvrivviv/IdeaProjects/AlvaroRiveraProyectoFicheros/src/main/resources/templates/");
+        templateResolver.setPrefix("src/main/resources/templates/");
         templateResolver.setSuffix(".html");
         templateEngine = new TemplateEngine();
         templateEngine.setTemplateResolver(templateResolver);
@@ -21,8 +21,8 @@ public class Generador {
 
     public void generarPagina() throws Exception {
         Properties config = new Properties();
-        config.load(Files.newBufferedReader(Path.of("/home/alvrivviv/IdeaProjects/AlvaroRiveraProyectoFicheros/src/main/resources/json/config.ini")));
-        JSONObject data = new JSONObject(Files.readString(Path.of("/home/alvrivviv/IdeaProjects/AlvaroRiveraProyectoFicheros/src/main/resources/json/libros.json")));
+        config.load(Files.newBufferedReader(Path.of("src/main/resources/json/config.ini")));
+        JSONObject data = new JSONObject(Files.readString(Path.of("src/main/resources/json/libros.json")));
 
         List<Autor> listaAutores = parsearAutores(data.getJSONArray("autores"));
         List<Libro> listaLibros = parsearLibros(data.getJSONArray("libros"));
@@ -42,7 +42,7 @@ public class Generador {
             Context contextoAutor = new Context();
             contextoAutor.setVariable("autor", autor);
             contextoAutor.setVariable("libros", filtrarLibrosPorAutor(listaLibros, autor.getId_autor()));
-            Files.writeString(autoresPath.resolve("autor_nº" + autor.getId_autor() + ".html"),
+            Files.writeString(autoresPath.resolve("autor_n" + autor.getId_autor() + ".html"),
                     templateEngine.process("perfiles", contextoAutor));
         }
     }
