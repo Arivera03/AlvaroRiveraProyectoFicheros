@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68182ac8-9441-4dc6-ac97-40c6c2e8a516" name="Changes" comment="si va">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alvaro/Generador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alvaro/Generador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/json/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/json/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +107,7 @@
       <workItem from="1734344835285" duration="56000" />
       <workItem from="1734593917018" duration="4612000" />
       <workItem from="1736245337190" duration="31000" />
+      <workItem from="1736337693728" duration="1416000" />
     </task>
     <task id="LOCAL-00001" summary="empiezo proyecto">
       <option name="closed" value="true" />
