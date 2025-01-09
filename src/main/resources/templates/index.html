@@ -9,7 +9,7 @@
 <h2>Lista de Autores</h2>
 <ul>
   <li th:each="autor : ${autores}">
-    <a th:href="'src/main/resources/autores/autor_n' + ${autor.id_autor} + '.html'" th:text="${autor.nombre_autor}"></a>
+    <a th:href="'src/main/resources/ficherosweb/autores/autor_n' + ${autor.id_autor} + '.html'" th:text="${autor.nombre_autor}"></a>
   </li>
 </ul>
 </body>
